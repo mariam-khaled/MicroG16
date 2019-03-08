@@ -1,5 +1,7 @@
 # MicroG16
 
+Microprocessor project "Tiva C"
+
 **Team Members:
 
 Israa ElSayed Yahia
