@@ -1,0 +1,26 @@
+char DioGetPinValue(char port , char pin) //input - data is 0 if switch not pressed , 1 if pressed
+{
+	switch(port)
+	{
+		case 0: //porta
+		return get_bit(GPIO_PORTA_DATA_R,pin);
+			
+		
+		case 1: //portb
+		return get_bit(GPIO_PORTB_DATA_R,pin);
+			
+		
+		case 3: //portd
+		return get_bit(GPIO_PORTD_DATA_R,pin);
+			
+		case 4: //porte
+		return get_bit(GPIO_PORTE_DATA_R,pin);
+			
+		case 5: //portf
+		return get_bit(GPIO_PORTF_DATA_R,pin);
+			
+		default: return 0;
+	
+	}
+	
+}
