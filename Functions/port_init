@@ -1,0 +1,36 @@
+void port_init(char port)
+{
+	volatile unsigned long delay;
+	switch(port)
+	{
+		case 0: //porta
+		 SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R0;
+		 delay = SYSCTL_RCGCGPIO_R;
+		 GPIO_PORTA_LOCK_R = GPIO_LOCK_KEY;
+		 break;	
+		case 1: //portb
+		 SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R1;
+		 delay = SYSCTL_RCGCGPIO_R;
+		 GPIO_PORTB_LOCK_R = GPIO_LOCK_KEY;
+		break;	
+		
+		case 3: //portd
+		 SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R3;
+		 delay = SYSCTL_RCGCGPIO_R;
+		 GPIO_PORTD_LOCK_R = GPIO_LOCK_KEY;
+		break;	
+
+		case 4: //porte
+		 SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R4;
+		 delay = SYSCTL_RCGCGPIO_R;
+		 GPIO_PORTE_LOCK_R = GPIO_LOCK_KEY;
+		break;	
+
+		case 5: //portf
+		 SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R5;
+		 delay = SYSCTL_RCGCGPIO_R;
+		 GPIO_PORTF_LOCK_R = GPIO_LOCK_KEY;	
+break;			
+		 
+	}
+}
