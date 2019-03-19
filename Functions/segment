@@ -1,0 +1,51 @@
+void seg(char port , int num)
+{
+	//int number[10] = {0x40,0x79,0x24,0x30,0x19,0x12,0x02,0x78,0x00,0x10}; // to show numbers in display
+	int x;
+	
+		switch(port)
+	{
+		case 0: //porta
+		port_init(0);
+		for(x=7;x>0;x--)
+		DioSetPinDir(0,x,output);	
+		GPIO_PORTA_DATA_R |= number[num];
+		break;
+		
+		case 1: //portb
+		port_init(1);
+		for(x=7;x>=0;x--)
+		DioSetPinDir(1,x,output);
+	GPIO_PORTB_DATA_R &=0x00;
+		GPIO_PORTB_DATA_R |= number[num];	
+		break;
+		
+		
+		
+		case 3: //portd
+		port_init(3);
+		for(x=0;x<7;x++)
+		DioSetPinDir(3,x,output);
+	
+		GPIO_PORTD_DATA_R |= number[num];
+		break;
+		
+		case 4: //porte
+		port_init(4);
+		for(x=0;x<7;x++)
+		DioSetPinDir(4,x,output);
+	
+		GPIO_PORTE_DATA_R |= number[num];
+		break;
+		
+		case 5: //portf
+		port_init(5);
+		for(x=0;x<7;x++)
+		DioSetPinDir(5,x,output);
+	GPIO_PORTF_DATA_R &=0x00;
+		GPIO_PORTF_DATA_R |= number[num];
+		break;
+		
+	}
+		
+}
