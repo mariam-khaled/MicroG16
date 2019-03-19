@@ -1,0 +1,9 @@
+int  decrement(int counter)
+{
+return   counter--;	
+}
+
+
+void clear(void){
+seg3(1,5,0);//port b(1).. port f(4) pins 0,1,2
+}
