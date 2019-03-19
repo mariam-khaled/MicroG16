@@ -1,0 +1,23 @@
+void seg3(char port , char PortControl,int num)
+{ //port is for data (B), portControl is for cathode or anode(F), num is number to be displayed 
+	int num1;
+    
+		port_init(PortControl);
+		while(1){	
+		num1=num;
+		seg(port,num1%10);
+			Display(1,num1%10);
+		num1 = num1/10;
+		
+		seg(port,num1%10);
+			num1 = num1/10;
+			Display(2,num1%10);
+		
+		
+	seg(port,num1%10);
+			num1 = num1/10;
+			Display(4,num1%10);
+		//num1 = num1/10;
+			if(num1/10 ==0)break;
+		}
+}
