@@ -1,0 +1,28 @@
+void DioSetPinValue( char port , char pin , char value) //output - data is either high or low  
+{
+	switch(port)
+	{
+		case 0: //porta
+		assign_bit(GPIO_PORTA_DATA_R, pin ,value);
+		break;	
+		
+		case 1: //portb
+		assign_bit(GPIO_PORTB_DATA_R, pin ,value);
+		break;	
+
+		
+
+		case 3: //portd
+		assign_bit(GPIO_PORTD_DATA_R, pin ,value);
+		break;	
+
+		case 4: //porte
+		assign_bit(GPIO_PORTE_DATA_R, pin,value);
+		break;	
+
+		case 5: //portf
+		assign_bit(GPIO_PORTF_DATA_R, pin ,value);
+    break;		
+		
+	}
+}
