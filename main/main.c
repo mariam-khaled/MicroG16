@@ -49,7 +49,7 @@ int main (void)
 								
                 Delay1ms(200); //delay 0.2 sec
 							  counter = increment(counter);
-								seg3(1,4,0,1,2,counter);//port b(1).. port e(4) pins 0,1,2
+								seg3(1,5,1,2,3,counter);//port b(1).. port f(5) pins 1,2,3
 								
 							}
 							
@@ -63,7 +63,7 @@ int main (void)
 							if  (SWD ==0 && SWD_previous_state==0) // Decrement switch is pressed
 							{
 								counter = decrement(counter);
-								seg3(1,4,0,1,2,counter);//port b(1).. port e(4) pins 0,1,2
+								seg3(1,5,1,2,3,counter);//port b(1).. port f(5) pins 1,2,3
 								SWD_previous_state = 1;
 							}
 							
