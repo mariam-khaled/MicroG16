@@ -1,0 +1,12 @@
+void Delay1ms(unsigned long msec) {
+    unsigned long count; // declare count down variable
+ 
+    while (msec) {
+        count = 15913;   // 15913 for simulation and 11934 for the real board
+ 
+        while (count) {
+            count--;     // when counting down is finished, it takes 0.999875ms
+        }
+        msec--;          // count down the number of milliseconds you want
+    }
+}
